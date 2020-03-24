@@ -11,8 +11,8 @@ class Servico{
 
 	public String getServico(){
 		String strServico = "";
-		strServico += "Tipo do Serviço: " + tipoServico + "\n" +
-		"Material: " + material;
+		strServico += "Tipo do Serviço: " + this.tipoServico + "\n" +
+		"Material: " + this.material;
 
 		return strServico;
 	}

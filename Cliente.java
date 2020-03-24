@@ -21,4 +21,8 @@ class Cliente{
 		return strCliente;
 	}
 
+	public String getNome(){
+		return this.nome;
+	}
+
 }

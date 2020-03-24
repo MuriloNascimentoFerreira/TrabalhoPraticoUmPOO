@@ -1,16 +1,28 @@
 class AgendaServico{
 
+	private Cliente cliente;
 	private Data dataServico;
 	private double valor;
+	private Servico servico;
+	private String horario;
 
-	public static void main(String args[]){
+	public AgendaServico(Cliente cliente, Data dataServico, double valor, Servico servico, String horario){
+		this.cliente = cliente;
+		this.dataServico = dataServico;
+		this.valor = valor;
+		this.servico = servico;
+		this.horario = horario;
+	}
 
-		Servico escova = new Servico("Escova");
-		escova.setMaterial("Nada");
+	public String getAgendaServico(){
+		String strAgendaServico = "";
+		strAgendaServico += "============================\n" +
+		"Cliente: " + this.cliente.getNome() + "\n" +
+		"Data agendada: " + this.dataServico.getData() + "\n" +
+		"Valor: " + valor + "\n" +
+		"Horário: " + horario + "\n" +
+		"Serviço " + "\n" + servico.getServico() + "\n============================\n";
 
-		Endereco endUm = new Endereco("Aldair santana", "904", "Jardim Graziela");
-
-		Cliente maria = new Cliente("Maria Santos", "000000-0", "9999999999", endUm);
-		System.out.println(maria.getCliente(endUm));
+		return strAgendaServico;
 	}
 }
